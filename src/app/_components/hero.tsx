@@ -1,8 +1,10 @@
 import {WhatsappLogo} from "@phosphor-icons/react/dist/ssr";
+import dogImg from "../../../public/hero-dog.webp";
+import Image from "next/image";
 export const Hero = () => {
     return(
         <section className="bg-[#e84c3d] text-white relative  overflow-hidden">
-            <div>
+            <div className="container mx-auto py-16 px-4 relative">
                 <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
                   <div className="space-y-6">
                     <h1 className=" text-3xl  md:text-4xl lg:text-5xl font-bold leading- py-5">
@@ -26,8 +28,12 @@ export const Hero = () => {
                         
                   </div>
 
-                  <div>
-                        <h1>FOTO DO CACHOROO</h1>
+                  <div className="hidden md:block h-full">
+                    <Image
+                    src={dogImg}
+                    alt="Foto do doguinho"
+                    className="object-contain"
+                   />
 
                   </div>
                 </article>
