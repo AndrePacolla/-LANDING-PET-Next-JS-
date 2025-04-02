@@ -4,7 +4,7 @@ import Image from "next/image";
 export const Hero = () => {
     return(
         <section className="bg-[#e84c3d] text-white relative  overflow-hidden">
-            <div className="container mx-auto py-16 px-4 relative">
+            <div className="container mx-auto py-16 md:pb-0 px-4 relative">
                 <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
                   <div className="space-y-6">
                     <h1 className=" text-3xl  md:text-4xl lg:text-5xl font-bold leading- py-5">
@@ -28,11 +28,14 @@ export const Hero = () => {
                         
                   </div>
 
-                  <div className="hidden md:block h-full">
+                  <div className="hidden md:block h-full relative">
                     <Image
                     src={dogImg}
                     alt="Foto do doguinho"
                     className="object-contain"
+                    fill
+                    quality={100}
+                    priority
                    />
 
                   </div>
