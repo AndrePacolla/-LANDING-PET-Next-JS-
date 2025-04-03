@@ -4,6 +4,17 @@ import Image from "next/image";
 export const Hero = () => {
     return(
         <section className="bg-[#e84c3d] text-white relative  overflow-hidden">
+            <div>
+                <Image
+                 src={dogImg} 
+                 alt="foto bg-Doguinho"
+                 fill
+                 sizes="100vw"
+                 priority
+                 className="object-cover opacity-60 lg:hidden"
+                 />
+                 <div className="absolute inset-0 bg-black opacity-40 md:hidden"></div>
+            </div>
             <div className="container mx-auto py-16 md:pb-0 px-4 relative">
                 <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
                   <div className="space-y-6">
@@ -22,13 +33,13 @@ export const Hero = () => {
               
                     <div className="mt-8">
                         <p className="text-sm mb-4">
-                            <b className="bg-black text-white px-2 py-1 rounded-lg">5%</b>de desconto na primeira compra.
+                            <b className="bg-black text-white px-2 py-1 mr-2 rounded-lg">5%</b>de desconto na primeira compra.
                         </p>
                     </div>
                         
                   </div>
 
-                  <div className="hidden md:block h-full relative">
+                  <div className="hidden md:block h-full relative ">
                     <Image
                     src={dogImg}
                     alt="Foto do doguinho"
