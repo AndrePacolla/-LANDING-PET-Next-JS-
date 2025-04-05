@@ -1,5 +1,6 @@
 import {WhatsappLogo} from "@phosphor-icons/react/dist/ssr";
 import dogImg from "../../../public/hero-dog.webp";
+import catImg from "../../../public/cat-hero.png";
 import Image from "next/image";
 export const Hero = () => {
     return(
@@ -36,10 +37,19 @@ export const Hero = () => {
                             <b className="bg-black text-white px-2 py-1 mr-2 rounded-lg">5%</b>de desconto na primeira compra.
                         </p>
                     </div>
+                    <div className="hidden lg:block w-32">
+                        <Image
+                        src={catImg}
+                        alt="cat"
+                        className="object-fill"
+                        quality={100}
+                        priority
+                        />
+                    </div>
                         
                   </div>
 
-                  <div className="hidden md:block h-full relative ">
+                  <div className="hidden md:block h-full relative mt-4">
                     <Image
                     src={dogImg}
                     alt="Foto do doguinho"
@@ -51,9 +61,7 @@ export const Hero = () => {
 
                   </div>
                 </article>
-
             </div>
-           
         </section>
     )
 };
