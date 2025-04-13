@@ -61,7 +61,7 @@ export const About = () => {
               <div className="flex gap-3">
               <a href="#" 
                   className="bg-[#2f5312] text-white flex items-center justify-center w-fit gap-2 px-5 py-2 rounded-md">
-                  <WhatsappLogo className="w-5 h-5 text-white hover:scale-110 duration-200 "/>
+                  <WhatsappLogo className="w-7 h-7 text-white hover:scale-110 duration-200 "/>
                   Contato via WhatsApp
                 </a>
 
