@@ -49,7 +49,7 @@ export const Services = () => {
     align: "start",
     slidesToScroll: 1,
     breakpoints: {
-      "(min-width: 768px)":{slidestoScroll: 3}
+      "(min-width: 768px)":{slidesToScroll: 3}
     }
 
 
@@ -61,8 +61,24 @@ export const Services = () => {
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl text-center font-bold md:text-5xl mb-12 ">Nossos Serviços</h2>
             <div className="relative">
-              <div className="overflow-hidden">
+              <div className="overflow-hidden" ref={emblaRef}>
+                <div className="flex">
+                  {services.map((item, index) => (
+                    <div key={index} className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/3)] px-3"> 
+                      <article className="bg-[#1e293b] text-white rounded-2xl p-6 space-y-4 h-full flex flex-col">
+                         <div className="flex-1flex items-start justify-between">
+                            <span className="text-3xl">{item.icon}</span>
 
+                         </div>
+
+                      </article>
+
+                    </div>
+
+                  ))}
+
+
+                </div>
               </div>
 
             </div>
