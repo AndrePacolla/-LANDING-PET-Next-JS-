@@ -1,7 +1,7 @@
 "use client"
 
 import useEmblaCarousel from "embla-carousel-react";
-import {ChevronLeft, ChevronRight, Scissors, Syringe, CarTaxiFront, Hotel }  from "lucide-react";
+import {ChevronLeft, ChevronRight, Scissors, Syringe, CarTaxiFront, Hotel, Clock }  from "lucide-react";
 import { WhatsappLogo } from "@phosphor-icons/react";
 
 
@@ -64,14 +64,29 @@ export const Services = () => {
                     <div key={index} className="  flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/3)] px-3"> 
                       <article className="bg-[#1e293b] text-white rounded-2xl p-6  h-full flex flex-col">
                          <div className="flex items-start justify-between">
-                          <div className="flex gap-4">
+                          <div className="flex gap-3 mb-5">
                             <span className="text-3xl">{item.icon}</span>
-                            <div>
+                            <div className="flex flex-col h-full space-y-3">
                               <h3 className="font-bold text-xl my-1 select-none">{item.title}</h3>
                               <p className="text-gray-400 text-sm select-none"> {item.description}</p>
                             </div>
                          </div>
                         </div>
+                        <div className="border-t border-gray-700 flex items-center justify-between">
+                          <div className="flex mt-4 gap-3">
+                            <Clock className="w-5 h-5"/>
+                            <span>{item.duration}</span>
+                          </div>
+                         
+                          <a className="flex items-center justify-center  pt-4 gap-2"
+                          href="#">
+                            <WhatsappLogo className="w-5 h-5"/>
+                           <span>Entrar em contato</span> 
+
+                          </a>   
+
+                        </div>
+
                       </article>
 
                     </div>
