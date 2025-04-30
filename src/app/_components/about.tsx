@@ -7,7 +7,7 @@ import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
 
 export const About = () => {
     return(
-        <section className="bg-[#fddfb6] py-16">
+        <section className="bg-white py-16">
          <div className="container px-4 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           <div className="relative">

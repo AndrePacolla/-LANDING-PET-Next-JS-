@@ -5,7 +5,7 @@ import {ChevronLeft, ChevronRight, Scissors, Syringe, CarTaxiFront, Hotel, Clock
 import { WhatsappLogo } from "@phosphor-icons/react";
 
 
-const services = [
+const testimonials = [
     {
       title: "Banho e Tosa",
       description: "Inclui banho com produtos especificos para o tipo de pelagem e pele do animal, corte de unhas, limpeza das orelhas e tosa personalizada (higênica ou estilizada).",
@@ -20,37 +20,15 @@ const services = [
       duration: "1h",
       price: "$45",
       icon: <Syringe/>,
-      linkText: "Olá, vi no site sobre Banho e Tosa e gostaria de mais informações."  
-
-    },
-    {
-      title: "Taxi Pet",
-      description: "Serviços de trasnporte para levar e buscar os pets no petshop, clinicas veterinarias ou outros locais. Ideal para tutores que nçao tem tempo ou transporte adequado para locomover os animais.",
-      duration: "2h",
-      price: "$80",
-      icon: <CarTaxiFront/>,
-      linkText: "Olá, vi no site sobre Banho e Tosa e gostaria de mais informações."      
-    },
-    {
-      title: "Hotel para pets",
-      description: "Serviços de hospedagem para animais de estimação, ideal para quando os tutores precisam viajar ou se ausentar por alguns dias. Os pets ficam acomodados em espaços seguros, confortáveis.",
-      duration: "24h",
-      price: "$250",
-      icon: <Hotel/>,
-      linkText: "Olá, vi no site sobre Banho e Tosa e gostaria de mais informações."  
+      linkText: "Olá, vi no site sobre Banho e Tosa e gostaria de mais informações."
     }
 ];
 
 
-export const Services = () => {
+export const Testimonials = () => {
 
   const [emblaRef, emplaApi] = useEmblaCarousel({
-    loop: false,
-    align: "start",
-    slidesToScroll: 1,
-    breakpoints: {
-      "(min-width: 768px)":{slidesToScroll: 3}
-    }
+    loop: true,
   })
 
   const scrollPrev = () => {
@@ -62,15 +40,15 @@ export const Services = () => {
   };
 
     return(
-        <section className="text-black py-16">
+        <section className=" bg-[#FFD449] py-16">
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold md:text-5xl mb-12 ">Nossos Serviços</h2>
-            <div className="relative">
+                <h2 className="text-4xl font-bold md:text-5xl mb-12 text-center "> Depoimentos</h2>
+            <div className="relative max-w-4xl mx-auto">
               <div className="overflow-hidden" ref={emblaRef}>
 
                 <div className="flex">
-                  {services.map((item, index) => (
-                    <div key={index} className="  flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/3)] px-3"> 
+                  {testimonials.map((item, index) => (
+                    <div key={index} className="  flex-[0_0_100%]  min-w-0  px-3"> 
                       <article className="bg-[#1e293b] text-white rounded-2xl p-6 space-y-3 h-full flex flex-col">
                          <div className="flex items-start justify-between">
                           <div className="flex gap-3 mb-5">
@@ -101,7 +79,7 @@ export const Services = () => {
               </div>
 
               <button 
-                className="w-10 h-10  bg-white flex items-center justify-center rounded-full shadow-lg absolute left-3 -translate-y-1/2 -translate-x-1/2 
+                className="w-10 h-10 bg-[#FFD449] flex items-center justify-center rounded-full shadow-lg absolute left-3 -translate-y-1/2 -translate-x-1/2 
                 top-1/2 z-10"
                 onClick={scrollPrev}
                 >
@@ -110,7 +88,7 @@ export const Services = () => {
               </button>
 
               <button 
-                className="w-10 h-10  bg-white flex items-center justify-center rounded-full shadow-lg absolute -right-6 -translate-y-1/2 -translate-x-1/2 
+                className="w-10 h-10 bg-[#FFD449] flex items-center justify-center rounded-full shadow-lg absolute -right-6 -translate-y-1/2 -translate-x-1/2 
                 top-1/2 z-10"
                 onClick={scrollNext}
                 >
