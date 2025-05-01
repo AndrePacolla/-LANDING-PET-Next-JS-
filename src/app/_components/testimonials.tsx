@@ -3,24 +3,27 @@
 import useEmblaCarousel from "embla-carousel-react";
 import {ChevronLeft, ChevronRight, Scissors, Syringe, CarTaxiFront, Hotel, Clock }  from "lucide-react";
 import { WhatsappLogo } from "@phosphor-icons/react";
-
+import tutor1 from "../../../public/tutor1.png"
+import Image from "next/image";
 
 const testimonials = [
     {
-      title: "Banho e Tosa",
-      description: "Inclui banho com produtos especificos para o tipo de pelagem e pele do animal, corte de unhas, limpeza das orelhas e tosa personalizada (higênica ou estilizada).",
-      duration: "1h",
-      price: "$50",
-      icon: <Scissors/>,
-      linkText: "Olá, vi no site sobre Banho e Tosa e gostaria de mais informações."  
+      content: "Desde que comecei a levar a luna para banho e tosa aqui, ela nunca estev táo feliz",
+      author: "Maria Souza",
+      role: "Tutora da Luna (Golden Retriever)",
+      image: tutor1
     },
     {
-      title: "Consulta Veterinária",
-      description: "Oferece atendimento clinico básico ou especializado para cuidar da saúde do animal. Inclui diagnóstico de doenças, aplicação de vacina obrigatórias.",
-      duration: "1h",
-      price: "$45",
-      icon: <Syringe/>,
-      linkText: "Olá, vi no site sobre Banho e Tosa e gostaria de mais informações."
+      content: "Desde que comecei a levar a luna para banho e tosa aqui, ela nunca estev táo feliz",
+      author: "Maria Souza",
+      role: "Tutora da Luna (Golden Retriever)",
+      image: tutor1
+    },
+    {
+      content: "Desde que comecei a levar a luna para banho e tosa aqui, ela nunca estev táo feliz",
+      author: "Maria Souza",
+      role: "Tutora da Luna (Golden Retriever)",
+      image: tutor1
     }
 ];
 
@@ -50,28 +53,20 @@ export const Testimonials = () => {
                   {testimonials.map((item, index) => (
                     <div key={index} className="  flex-[0_0_100%]  min-w-0  px-3"> 
                       <article className="bg-[#1e293b] text-white rounded-2xl p-6 space-y-3 h-full flex flex-col">
-                         <div className="flex items-start justify-between">
-                          <div className="flex gap-3 mb-5">
-                            <span className="text-3xl">{item.icon}</span>
-                            <div className="flex flex-col h-full space-y-3">
-                              <h3 className="font-bold text-xl my-1 select-none">{item.title}</h3>
-                              <p className="text-gray-400 text-sm select-none"> {item.description}</p>
-                            </div>
-                         </div>
-                        </div>
-                        <div className="border-t border-gray-700 flex items-center justify-between my-2 pt-4">
-                          <div className="flex gap-3">
-                            <Clock className="w-5 h-5"/>
-                            <span>{item.duration}</span>
+                        <div className="flex flex-col items-center text-center space-y-4">
+                          <div className="relative w-24 h-24">
+                            <Image
+                            src={item.image}
+                            alt={item.author}
+                            fill
+                            sizes="96px"
+                            className="object-cover rounded-full"
+                            />
+
                           </div>
-                         
-                          <a className="flex items-center justify-center gap-2 rounded-lg p-2 hover:bg-red-500 hover:text-black  duration-300"
-                          href="#">
-                           <WhatsappLogo className="w-5 h-5"/>
-                           <span className=" hover:text-black">Entrar em contato</span> 
-                          </a>   
 
                         </div>
+                     
                       </article>
                     </div>
                   ))}
