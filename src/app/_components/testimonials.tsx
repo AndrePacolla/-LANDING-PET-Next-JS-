@@ -8,20 +8,20 @@ import Image from "next/image";
 
 const testimonials = [
     {
-      content: "Desde que comecei a levar a luna para banho e tosa aqui, ela nunca estev táo feliz",
-      author: "Maria Souza",
+      content: "Desde que comecei a levar a luna para banho e tosa aqui, ela nunca estev táo feliz! O atendimento é impecável, os profissionais sçao super cuidadosos e sempre deixam inha peluda linda e cheirosa.Recomendo de olhos fechados!",
+      author: "Marcos Souza",
       role: "Tutora da Luna (Golden Retriever)",
       image: tutor1
     },
     {
-      content: "Desde que comecei a levar a luna para banho e tosa aqui, ela nunca estev táo feliz",
-      author: "Maria Souza",
+      content: "Desde que comecei a levar a luna para banho e tosa aqui, ela nunca estev táo feliz! O atendimento é impecável, os profissionais sçao super cuidadosos e sempre deixam inha peluda linda e cheirosa.Recomendo de olhos fechados!",
+      author: "Marcos Souza",
       role: "Tutora da Luna (Golden Retriever)",
       image: tutor1
     },
     {
-      content: "Desde que comecei a levar a luna para banho e tosa aqui, ela nunca estev táo feliz",
-      author: "Maria Souza",
+      content: "Desde que comecei a levar a luna para banho e tosa aqui, ela nunca estev táo feliz! O atendimento é impecável, os profissionais sçao super cuidadosos e sempre deixam inha peluda linda e cheirosa.Recomendo de olhos fechados! ",
+      author: "Marcos Souza",
       role: "Tutora da Luna (Golden Retriever)",
       image: tutor1
     }
@@ -58,15 +58,20 @@ export const Testimonials = () => {
                             <Image
                             src={item.image}
                             alt={item.author}
-                            fill
+                            fill /*ocupar o espaço inteiro */
                             sizes="96px"
                             className="object-cover rounded-full"
                             />
-
                           </div>
 
+                          <p className="px-7">{item.content} </p>
+                          <div>
+                            <p className="font-bold">{item.author}</p>
+                            <p className="font-semibold text-sm text-gray-400" >{item.role}</p>             
+                          </div>
+                
+
                         </div>
-                     
                       </article>
                     </div>
                   ))}
