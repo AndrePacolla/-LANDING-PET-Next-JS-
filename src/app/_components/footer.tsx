@@ -47,6 +47,34 @@ export const Footer = () => {
                 ))}
             </div>
             </div>
+
+            <footer className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 mt-5 ">
+                <div className="container mx-auto space-y-5  ">
+                    <h3 className="text-4xl font-semibold mb-2 ">Pet Shop Dev</h3>
+                    <p>Cuidando do melhor amigo com amore dedicação. </p>
+                    <a 
+                    href="#"
+                    className="bg-green-500 text-black text-1xl px-4 py-1 rounded-md"
+                    >
+                        Contato via WhatsApp
+                    </a>
+                </div>
+
+                <div className="container mx-auto space-y-3  ">
+                    <h3 className="text-4xl font-semibold mb-2 ">Contatos</h3>
+                    <p>E-mail: teste@teste.com </p>
+                    <p>Telefone: (XX) 1234-6799 </p>
+                    <p>Rua X , centro , Campinas-SP | SP: (XX) 1234-5678</p>
+                </div>
+
+                  <div className="container mx-auto space-y-3  ">
+                    <h3 className="text-4xl font-semibold mb-2 ">Contatos</h3>
+                    <p>E-mail: teste@teste.com </p>
+                    <p>Telefone: (XX) 1234-6799 </p>
+                    <p>Rua X , centro , Campinas-SP | SP: (XX) 1234-5678</p>
+                </div>
+
+            </footer>
      
 
           </div>
